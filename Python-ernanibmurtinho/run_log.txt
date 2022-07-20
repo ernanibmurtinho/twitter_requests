@@ -1,0 +1,82 @@
+2022-07-20-20:09:12 - [START] - JobRetrieveTwitter
+2022-07-20-20:09:19 - [START] - JobRetrieveTwitter
+2022-07-20-20:09:19 - [STEP 1] - token loaded
+2022-07-20-20:09:19 - [step 2] - starting requests
+Started 'retrieve_service' calling 100 requests
+2022-07-20-20:09:19 - [STEP 3] - Making the authentication!
+2022-07-20-20:09:19 - [STEP 4] - Retrieving data from twitter!
+Finished 'retrieve_service' in 0.8930 secs
+The average time for requests 'retrieve_service' are 0.0089 secs
+2022-07-20-20:09:20 - [step 5] - end of requests
+2022-07-20-20:09:20 - [step 6] - building df
+2022-07-20-20:09:31 - [step 7] - the df contains 100 lines
+2022-07-20-20:09:31 - [step 8] - showing df first rows
++-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+-------------------+---------------+---------------------------------------+----------------+----+-----+---+
+|message_id         |message_created_at|text                                                                                                                                              |author                                 |user_id            |user_created_at|user_name                              |user_screen_name|year|month|day|
++-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+-------------------+---------------+---------------------------------------+----------------+----+-----+---+
+|1549766177446105088|1658328024        |RT @CanalFlazoeiro: @IFlabase O atleta foi captado pelo DSFLA (Departamento de Scout do Flamengo).
+O #Flamengo venceu a concorrência de #…      |Diego Pereira                          |1404216802075459585|1623626369     |Diego Pereira                          |diegohpereiira  |2022|7    |20 |
+|1549766896047865859|1658328195        |SAUDAÇÕES CORINTHIANAS!
+Olha o copo do jogo de hoje, fiel!🖤
+
+R$15,00
+
+Para mais informações chama nossa equipe no… https://t.co/5qmRpz2fdx      |Loja Poderoso Timão | Neo Química Arena|1145707872178855936|1561993017     |Loja Poderoso Timão | Neo Química Arena|LojaArena_SCCP  |2022|7    |20 |
+|1549768989701816321|1658328695        |A @tvglobo transmite hoje @Corinthians x @Coritiba  para RS, SC, PR, SP (exceto Baixada Santista), GO, TO, MS, MT,… https://t.co/N9TLhfVZxc       |FIEL TURURU                            |1323410251102801920|1604360589     |FIEL TURURU                            |FielTururu      |2022|7    |20 |
+|1549769098120364033|1658328720        |#Corinthians https://t.co/TruDRxE5dU                                                                                                              |mx7!07 🇵🇹                            |1445229956510932992|1633404660     |mx7!07 🇵🇹                            |mathdoxoralixo7 |2022|7    |20 |
+|1549769268530757632|1658328761        |RT @bastidoressccp: Data para um acordo entre Fausto Vera, Argentino Juniors e #Corinthians já tem!
+Estão deixando a gente sonhar...             |Luís Butti                             |17059242           |1225337396     |Luís Butti                             |luisbutti       |2022|7    |20 |
+|1549769629102383104|1658328847        |RT @IDCorinthiana: 🤔Qual será o número de Yuri Alberto?
+#Corinthians #YuriAlberto #IdentidadeCorinthiana https://t.co/0zLE4ul0tK                |Fala Muito, FIEL!                      |1298845707554770951|1598503961     |Fala Muito, FIEL!                      |falamuitofiel   |2022|7    |20 |
+|1549769863119380481|1658328903        |RT @IDCorinthiana: Pergunta da Identidade Corinthiana ao @FBalbuenito  em Entrevista Coletiva de apresentação.
+🎥Corinthians TV
+#Corinthia…     |Lucas Faria Gomes                      |1301573398699614210|1599154286     |Lucas Faria Gomes                      |LucasFariaGome1 |2022|7    |20 |
+|1549772007570493440|1658329414        |será que hoje tem gol de atacante ? @Corinthians #Corinthians #yuriday                                                                            |felipe alves                           |958952546000777216 |1517467078     |felipe alves                           |byfelipealves   |2022|7    |20 |
+|1549774105901240320|1658329914        |MDS, flamengo mto chorão. Isso tudo é medo do Athlético PR?
+#Flamengo #Athletico #corinthians #fluminense… https://t.co/2CBO9ZqLhb               |Romeu Karam                            |51906092           |1246237945     |Romeu Karam                            |romeukaram      |2022|7    |20 |
+|1549774264936660995|1658329952        |RT @TheLibertadores: 👑🔴⚫ The king has arrived!
+🇨🇱➡🇧🇷 @Flamengo_en held the official presentation for Arturo Vidal today as he joins the cl…|Maxwell 🇧🇷🔴⚫➐                       |1117102942795042816|1555173071     |Maxwell 🇧🇷🔴⚫➐                       |maxwellrfsilva  |2022|7    |20 |
++-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+-------------------+---------------+---------------------------------------+----------------+----+-----+---+
+only showing top 10 rows
+
+root
+|-- user_name: string (nullable = true)
+|-- author: map (nullable = true)
+|    |-- key: string
+|    |-- value: string (valueContainsNull = true)
+|-- message: array (nullable = true)
+|    |-- element: map (containsNull = false)
+|    |    |-- key: string
+|    |    |-- value: string (valueContainsNull = true)
+
+RECORD 0--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+user_name | (SCCP)Mikael-Oliveira
+author    | [user_id -> 1198688584993247232, user_created_at -> 1574624620, user_name -> "(SCCP)Mikael-Oliveira", user_screen_name -> Oliveira5Mikael]
+message   | [[message_id -> 1549823078515048449, message_created_at -> 1658341590, text -> "Esse trio e entrosarem vai dar trabalho viu
+Só queria que o Renato TB voltasse a jogar bem
+Seria incrível ver os 4… https://t.co/3ZfqM1RHQ0", author -> (SCCP)Mikael-Oliveira], [message_id -> 1549824279545581569, message_created_at -> 1658341877, text -> "Finalmente tiraram a camisa 7 do Luan
+#Corinthians https://t.co/qApo5xIt2T", author -> (SCCP)Mikael-Oliveira]]
+-RECORD 1--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+user_name | 09_te3uzinˢᶜᶜᵖ
+author    | [user_id -> 1444830282885091408, user_created_at -> 1633309379, user_name -> "09_te3uzinˢᶜᶜᵖ", user_screen_name -> 09t3eu]
+message   | [[message_id -> 1549804282257592322, message_created_at -> 1658337109, text -> "Mauro boseli apagou suas lembranças de outros times no Instagram,  só deixou do Corinthians e também compartilhou no… https -> //t.co/uunoB68WP0", author -> 09_te3uzinˢᶜᶜᵖ]]
+only showing top 2 rows
+
+2022-07-20-20:09:38 - [STEP 8] - Checking the schema struct generated!
+root
+ |-- user_name: string (nullable = true)
+ |-- author: struct (nullable = true)
+ |    |-- author: map (nullable = true)
+ |    |    |-- key: string
+ |    |    |-- value: string (valueContainsNull = true)
+ |-- message: struct (nullable = true)
+ |    |-- message: array (nullable = true)
+ |    |    |-- element: map (containsNull = true)
+ |    |    |    |-- key: string
+ |    |    |    |-- value: string (valueContainsNull = true)
+
+2022-07-20-20:09:38 - [step 9] - checking df structure
+2022-07-20-20:09:40 - [step 10] - writing df to disk
+2022-07-20-20:09:44 - [Twitter search job] - Ended
+2022-07-20-20:09:44 - [SUCCESS] - JobRetrieveTwitter
+2022-07-20-20:09:44 - [FINISH] - JobRetrieveTwitter

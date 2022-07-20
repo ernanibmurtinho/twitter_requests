@@ -1,0 +1,1 @@
+'{"fields":[{"metadata":{},"name":"message","nullable":true,"type":{"containsNull":false,"elementType":{"keyType":"string","type":"map","valueContainsNull":true,"valueType":"string"},"type":"array"}}],"type":"struct"}'

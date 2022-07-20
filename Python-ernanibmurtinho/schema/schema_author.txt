@@ -1,0 +1,1 @@
+'{"fields":[{"metadata":{},"name":"author","nullable":true,"type":{"keyType":"string","type":"map","valueContainsNull":true,"valueType":"string"}}],"type":"struct"}'
